@@ -17,6 +17,7 @@ class BookController extends Controller
         return view('books.show', ['book' => $books[$id]]);
     }
 
+
     public function featured()
     {
         $books = $this->getBooks();
@@ -47,8 +48,11 @@ class BookController extends Controller
             3 => ['title' => 'Honkai: Star Rail', 'author' => 'HoYoverse', 'year' => '2023', 'genre' => 'Space'],
             4 => ['title' => 'Dark Souls I', 'author' => 'FromSoftware', 'year' => '2011', 'genre' => 'Dark Fantasy'],
             5 => ['title' => 'Dark Souls II', 'author' => 'FromSoftware', 'year' => '2012', 'genre' => 'Dark Fantasy'],
-            6 => ['title' => 'Dark Souls III', 'author' => 'FromSoftware', 'year' => '2016', 'genre' => 'Dark Fantasy'],
+            6 => ['title' => 'Dark Souls III', 'author' => 'FromSoftware', 'year' => '2026', 'genre' => 'Dark Fantasy'],
         ];
+
+        //$books = [];  //->this returns no books found message in the view
+
         return $books; //returns the data from $books array
     }
 }

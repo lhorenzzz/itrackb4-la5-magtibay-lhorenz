@@ -1,13 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Featured Book</title>
-</head>
-<body>
-    <p>Created by: Lhorenz T. Magtibay</p>
+@extends ('layouts.app')
+@section('title', 'Featured Book')
+@section('content')
+
     <h1>Featured Book</h1>
     <p>Title: {{ $book['title'] }}</p>
     <p>Author: {{ $book['author'] }}</p>
@@ -15,6 +9,5 @@
     <p>Genre: {{ $book['genre'] }}</p>
     <a href="{{ route('books.index') }}">Back to list</a>
 
-</body>
-</html>
+@endsection
 

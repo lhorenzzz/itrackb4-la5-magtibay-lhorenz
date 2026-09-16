@@ -2,7 +2,6 @@
 @section('title', 'My Book List')
 @section('content')
     <h3>My Book List</h3>
-
     <table border="1" cellpadding="5" cellspacing="0">
         <tr>
             <th>#</th>
@@ -10,9 +9,8 @@
             <th>Author</th>
             <th>Year</th>
             <th>Genre</th>
-            <th>Remarks</th>
+            <th>Final-Year</th>
         </tr>
-
         @forelse ($books as $id => $book)
             <tr>
                 <td>{{ $loop->iteration }}</td>
@@ -20,10 +18,10 @@
                 <td>{{ $book['author'] }}</td>
                 <td>{{ $book['year'] }}</td>
                 <td>{{ $book['genre'] }}</td>
-                @if($book['year'] >= 2026)
-                    <td><strong>NEW!</strong></td>
+                @if($book['year'] >= 2020)
+                    <td><strong>✅</strong></td>
                 @else
-                    <td><strong>OLD!</strong></td>
+                    <td><strong>✖️</strong></td>
                 @endif
             </tr>
         @empty
@@ -31,8 +29,5 @@
                 <td colspan="6">Sorry, no books found =(</td>
             </tr>
         @endforelse
-
     </table>
-
-
 @endsection

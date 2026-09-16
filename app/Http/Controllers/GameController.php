@@ -75,4 +75,10 @@ class GameController extends Controller
         $games = $this->games();
         return view('games.show', ['game' => $games[1]]);
     }
+
+    public function favorite()
+    {
+        $games = $this->games();
+        return view('games.show', ['game' => $games[2]]); // pick whichever game you want as "favorite"
+    }
 }

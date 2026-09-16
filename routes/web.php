@@ -23,5 +23,6 @@ Route::get('/books/{id}', [BookController::class, 'show']) -> name('books.show')
 Route::get('/teachers/featured', [TeacherController::class, 'featured']) -> name('teachers.featured');
 Route::resource('teachers', TeacherController::class)->only(['index', 'show']);
 
+Route::get('/games/favorite', [GameController::class, 'favorite'])->name('games.favorite');
 Route::get('/games/featured', [GameController::class, 'featured'])->name('games.featured');
 Route::resource('games', GameController::class)->only(['index', 'show']);
